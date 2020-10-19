@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollbarId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/coupanLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Billing Details"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                android:textSize="14sp"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp">
+
+            </TextView>
+
+            <include
+                layout="@layout/billing_details">
+
+
+            </include>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checked="true"
+                android:text=" Is Billing Different Shipping Details">
+
+            </CheckBox>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark">
+
+            </View>
+
+            <LinearLayout
+                android:id="@+id/ShippingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shipping Details"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp">
+
+            </TextView>
+
+                <include
+                    layout="@layout/shipping_details">
+                </include>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/coupanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:background="@null"
+            android:layout_gravity="start"
+            android:inputType="textAutoComplete"
+            android:textAllCaps="true"
+            android:hint="Enter Promocode">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/grey"
+            android:text="Apply">
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send"
+        style="@style/button_style"
+        android:layout_alignParentBottom="true"
+        android:text="Update">
+
+
+    </Button>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="25dp"
+
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textWebEmailAddress"
+            android:hint="@string/email">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:counterMaxLength="6"
+        app:counterEnabled="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            android:hint="@string/otp">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendOtp"
+        style="@style/button_style"
+        android:text="Send OTP"
+        android:layout_marginTop="25dp"
+        >
+
+    </Button>
+
+    <Button
+        android:id="@+id/verifyOTP"
+        style="@style/button_style"
+        android:text="@string/verify_otp"
+        android:layout_marginTop="25dp">
+
+    </Button>
+
+
+    <TextView
+        android:id="@+id/register"
+        android:text="@string/register_here"
+      style="@style/text_button_style"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/signIn"
+        android:text="@string/signin"
+        style="@style/text_button_style"
+        >
+
+    </TextView>
+
+
+
+
+
+</LinearLayout>

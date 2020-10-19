@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottonLayout"
+        android:layout_marginBottom="5dp"
+
+        tools:listitem="@layout/cart_card">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/bottonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/finalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Rs.200,000"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/placeOrder"
+            android:text="@string/place_order"
+            style="@style/button_style"
+            >
+
+        </Button>
+
+
+    </LinearLayout>
+</RelativeLayout>

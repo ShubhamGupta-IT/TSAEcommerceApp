@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/subCategoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/grey"
+        android:padding="1dp"
+        android:layout_margin="1dp">
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:lines="1"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Mobile">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/viewProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:drawableEnd="@drawable/right_arrow"
+            android:drawableTint="@color/colorAccent"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            android:text="View Products">
+        </TextView>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

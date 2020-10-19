@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!--Right Side Drawer-->
+
+<!--
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginTop="85dp"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/myAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:padding="3dp"
+                    android:text="@string/my_account">
+                </TextView>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/manageAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+
+                    android:text="@string/manage_address">
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="@string/sign_out">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+-->
+
+    <!--End Of Right Side Drawer-->
+
+
+    <!-- Left Side Navigation -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/mainHeader"
+                layout="@layout/nav_header_main"/>
+
+            <TextView
+                android:id="@+id/shopByCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainHeader"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:padding="3dp"
+                android:text="@string/shop_by_category">
+
+            </TextView>
+
+            <include
+                layout="@layout/main_category_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/version"
+                android:layout_below="@id/shopByCategory"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp">
+
+            </include>
+
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/app_version">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+    <!-- End of Left Side Navigation -->
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

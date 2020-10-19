@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="vdsvvd > dsdvevev > ccvvv> cvvdevevev cscscscsc>">
+
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subCategoryRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:spanCount="3"
+        tools:listitem="@layout/sub_category_card"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
