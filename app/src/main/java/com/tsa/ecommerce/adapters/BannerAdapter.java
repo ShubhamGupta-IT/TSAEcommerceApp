@@ -4,26 +4,24 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.tsa.ecommerce.R;
-import com.tsa.ecommerce.interfaces.ChooseCategory;
-import com.tsa.ecommerce.models.CategoryNameModel;
 
 import java.util.ArrayList;
 
 
 public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.ViewHolder> {
 
-    private final ArrayList<CategoryNameModel> categoryNameList;
+    private final ArrayList categoryNameList;
     Context context;
 
 
-    public BannerAdapter(Context context, ArrayList<CategoryNameModel> categoryNameList) {
+    public BannerAdapter(Context context, ArrayList categoryNameList) {
         this.context=context;
         this.categoryNameList = categoryNameList;
     }
@@ -45,23 +43,27 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
 
 
+        Glide.with(context).load("").into(holder.image);
+
 
     }
 
     @Override
     public int getItemCount() {
-     //   return categoryNameList.size();
-        return 10;
+       return categoryNameList.size();
+
     }
 
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView image;
         /////////////////////////
 
         ViewHolder(@NonNull View view) {
             super(view);
 
+            image=view.findViewById(R.id.image);
 
            
         }

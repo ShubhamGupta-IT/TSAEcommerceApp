@@ -9,7 +9,7 @@
     >
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/offerRecycler"
+        android:id="@+id/bannerRecycler"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_margin="3dp"
